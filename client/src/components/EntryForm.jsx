@@ -1,11 +1,11 @@
 import React from 'react';
 
-const EntryForm = () => {
+const EntryForm = (props) => {
   return (
-    <form>
+    <form onSubmit={props.submit}>
       <label>
         Enter string here:
-        <input type='text' name='string' />
+        <input type='text' value={props.value} onChange={props.change}/>
       </label>
       <input type='submit' name='Submit' />
     </form>
