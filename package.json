@@ -4,7 +4,7 @@
   "description": "web application to cut strings",
   "main": "index.js",
   "scripts": {
-    "start": "node server/index.js"
+    "start": "nodemon server/index.js"
   },
   "repository": {
     "type": "git",
