@@ -13,7 +13,10 @@ app.post('/test', (req, res) => {
   let str = req.body['string_to_cut'];
   controller.cut(str)
     .then((response) => {
-      res.status(201).send(response);
+      let data = {
+        return_string: response
+      };
+      res.status(201).send(data);
     })
     .catch((error) => {
       res.status(400).send(error);
