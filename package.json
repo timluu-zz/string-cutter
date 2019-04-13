@@ -1,0 +1,19 @@
+{
+  "name": "string-cutter",
+  "version": "1.0.0",
+  "description": "web application to cut strings",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timluu/string-cutter.git"
+  },
+  "author": "tim luu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timluu/string-cutter/issues"
+  },
+  "homepage": "https://github.com/timluu/string-cutter#readme"
+}
