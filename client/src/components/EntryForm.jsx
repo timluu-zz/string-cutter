@@ -1,14 +1,27 @@
 import React from 'react';
+import { 
+  Display, 
+  Entry, 
+  Form, 
+  FormContainer, 
+  Submit,
+  Subtitle 
+} from '../styles/EntryFormStyles.jsx';
 
 const EntryForm = (props) => {
   return (
-    <form onSubmit={props.submit}>
-      <label>
-        Enter string here:
-        <input type='text' value={props.value} onChange={props.change}/>
-      </label>
-      <input type='submit' name='Submit' />
-    </form>
+    <FormContainer>
+      <Display>
+          {props.display}
+      </Display>
+      <Form onSubmit={props.submit}>
+        <Subtitle>
+          Enter string below: 
+        </Subtitle>
+        <Entry type='text' value={props.value} onChange={props.change}></Entry>
+        <Submit type='submit' value='SUBMIT'></Submit>
+      </Form>
+    </FormContainer>
   )
 }
 
