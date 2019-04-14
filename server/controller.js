@@ -12,7 +12,7 @@ module.exports = {
   cut: function(str) {
     return new Promise((resolve, reject) => {
       let reducedStr = cutString(str);
-      if(reducedStr) {
+      if(reducedStr || reducedStr === '') {
         resolve(reducedStr);
       } else {
         reject(new Error('There appears to be an error with your string.'));
