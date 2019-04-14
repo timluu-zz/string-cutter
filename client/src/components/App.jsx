@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import EntryForm from './EntryForm.jsx';
+import Banner from './Banner.jsx';
+import { Container } from '../styles/AppStyles.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -8,7 +10,7 @@ class App extends React.Component {
     
     this.state = {
       str: '',
-      cutStr: ''
+      cutStr: '(Please enter a string.)'
     }
   }
 
@@ -40,11 +42,16 @@ class App extends React.Component {
 
   render() {
     return (
-      <EntryForm 
-        change={this.handleChange.bind(this)}
-        submit={this.handleSubmit.bind(this)}
-        value={this.state.str}
-      />
+      <Container>
+        <Banner />
+        <EntryForm 
+          change={this.handleChange.bind(this)}
+          submit={this.handleSubmit.bind(this)}
+          value={this.state.str}
+          display={this.state.cutStr}
+        />
+      </Container>
+      
     )
   }
 }
