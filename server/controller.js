@@ -1,7 +1,9 @@
 let cutString = (str) => {
   let reducedStr = '';
-    for(let i = 2; i < str.length; i+= 3) {
-      reducedStr += str[i];
+    for(let i = 0; i < str.length; i++) {
+      if(i % 3 === 2) {
+        reducedStr += str[i];
+      }
     }
 
     return reducedStr;
